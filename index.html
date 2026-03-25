@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇龙数字园 — 跨境电商一站式服务园区</title>
+    <meta name="description" content="奇龙数字园，跨境电商一站式服务园区。AI驱动的选品、运营、营销全链路解决方案。">
+    <link rel="icon" href="images/ai-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景动画 -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/ai-logo.png" alt="奇龙" class="nav-logo">
+                <span class="nav-title">奇龙数字园</span>
+            </div>
+            <div class="nav-links">
+                <a href="#products" class="nav-link">产品服务</a>
+                <a href="#features" class="nav-link">核心优势</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge glass-card-subtle">
+                <span class="badge-dot"></span>
+                AI 驱动 · 全球触达
+            </div>
+            <h1 class="hero-title">
+                跨境电商<br>
+                <span class="gradient-text">一站式服务园区</span>
+            </h1>
+            <p class="hero-subtitle">
+                奇龙数字园，整合 AI 智能工具与跨境电商 ERP 系统，<br>
+                为卖家提供从选品到上架的全链路自动化解决方案
+            </p>
+            <a href="#products" class="hero-cta glass-btn">
+                探索产品 →
+            </a>
+        </div>
+    </section>
+
+    <!-- 产品入口 -->
+    <section id="products" class="section products-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">产品服务</h2>
+                <p class="section-desc">选择适合你的解决方案，开启跨境电商之旅</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- 由 JS 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="features" class="section features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">核心优势</h2>
+                <p class="section-desc">AI 技术赋能跨境电商全链路</p>
+            </div>
+            <div class="features-grid" id="featuresGrid">
+                <!-- 由 JS 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/ai-logo.png" alt="奇龙" class="footer-logo">
+                <span class="footer-title">奇龙数字园</span>
+            </div>
+            <p class="footer-desc">跨境电商一站式服务园区</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">© 2026 奇龙数字园 (qilongshuzi.com). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== 可扩展配置：后续添加产品只需在此数组追加一项 =====
+        const products = [
+            {
+                name: "龙珠 ERP",
+                desc: "跨境电商全链路管理系统",
+                features: ["商品采集与管理", "AI 智能编辑", "订单·物流·财务", "多店铺运营"],
+                url: "/ERP",
+                logo: "images/erp-logo.png",
+                gradient: "linear-gradient(135deg, #3B82F6, #8B5CF6)",
+                accentColor: "#3B82F6",
+            },
+            {
+                name: "龙珠 AI",
+                desc: "AI 内容创作与视频生成平台",
+                features: ["AI 视频生成", "智能图文创作", "商品素材生成", "多语言翻译"],
+                url: "/AI",
+                logo: "images/ai-logo.png",
+                gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
+                accentColor: "#F59E0B",
+            },
+            // ↓↓↓ 后续添加新产品，只需在这里加一项 ↓↓↓
+            // {
+            //     name: "新产品",
+            //     desc: "产品描述",
+            //     features: ["功能1", "功能2"],
+            //     url: "/new",
+            //     logo: "images/new-logo.png",
+            //     gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
+            //     accentColor: "#10B981",
+            // },
+        ];
+
+        const features = [
+            { icon: "🎯", title: "智能选品", desc: "AI 分析市场趋势，精准推荐高潜力商品" },
+            { icon: "🤖", title: "AI 营销", desc: "自动生成标题、描述、图片素材，多语言适配" },
+            { icon: "⚡", title: "自动化运营", desc: "从采集到上架全流程自动化，效率提升 10 倍" },
+            { icon: "📊", title: "数据分析", desc: "实时监控销售数据，智能优化运营策略" },
+        ];
+
+        // ===== 渲染产品卡片 =====
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = products.map(p => `
+                <a href="${p.url}" class="product-card glass-card" style="--accent: ${p.accentColor}">
+                    <div class="product-glow" style="background: ${p.gradient}"></div>
+                    <div class="product-logo-wrap">
+                        <img src="${p.logo}" alt="${p.name}" class="product-logo">
+                    </div>
+                    <h3 class="product-name">${p.name}</h3>
+                    <p class="product-desc">${p.desc}</p>
+                    <ul class="product-features">
+                        ${p.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                    <div class="product-action">
+                        <span class="product-btn" style="background: ${p.gradient}">进入系统 →</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // ===== 渲染特色卡片 =====
+        function renderFeatures() {
+            const grid = document.getElementById('featuresGrid');
+            grid.innerHTML = features.map(f => `
+                <div class="feature-card glass-card-subtle">
+                    <span class="feature-icon">${f.icon}</span>
+                    <h3 class="feature-title">${f.title}</h3>
+                    <p class="feature-desc">${f.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        renderProducts();
+        renderFeatures();
+
+        // ===== 滚动动画 =====
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

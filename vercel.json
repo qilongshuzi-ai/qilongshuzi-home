@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/ERP",
+            "destination": "https://tiktok-erp-qilongshuzi-ais-projects.vercel.app/ERP"
+        },
+        {
+            "source": "/ERP/:path*",
+            "destination": "https://tiktok-erp-qilongshuzi-ais-projects.vercel.app/ERP/:path*"
+        }
+    ]
+}
