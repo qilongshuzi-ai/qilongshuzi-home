@@ -1,14 +1,6 @@
 {
     "rewrites": [
         {
-            "source": "/ERP",
-            "destination": "https://tiktok-erp.vercel.app/ERP"
-        },
-        {
-            "source": "/ERP/:path*",
-            "destination": "https://tiktok-erp.vercel.app/ERP/:path*"
-        },
-        {
             "source": "/AI",
             "destination": "https://qilongshuzi.vercel.app/AI"
         },
