@@ -1,12 +1,3 @@
 {
-    "rewrites": [
-        {
-            "source": "/AI",
-            "destination": "https://qilongshuzi.vercel.app/AI"
-        },
-        {
-            "source": "/AI/:path*",
-            "destination": "https://qilongshuzi.vercel.app/AI/:path*"
-        }
-    ]
+    "rewrites": []
 }
