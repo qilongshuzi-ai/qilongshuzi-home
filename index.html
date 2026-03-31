@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,12 @@
     <link rel="icon" href="images/ai-logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- 背景动画 -->
     <div class="bg-animation">
@@ -35,8 +39,8 @@
         </div>
     </nav>
 
-    <!-- Hero 区域 -->
-    <section class="hero">
+    <!-- Hero + 产品入口（合并为单页） -->
+    <section class="hero" id="products">
         <div class="hero-content">
             <div class="hero-badge glass-card-subtle">
                 <span class="badge-dot"></span>
@@ -50,22 +54,9 @@
                 奇龙数字园，整合 AI 智能工具与跨境电商 ERP 系统，<br>
                 为卖家提供从选品到上架的全链路自动化解决方案
             </p>
-            <a href="#products" class="hero-cta glass-btn">
-                探索产品 →
-            </a>
         </div>
-    </section>
-
-    <!-- 产品入口 -->
-    <section id="products" class="section products-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">产品服务</h2>
-                <p class="section-desc">选择适合你的解决方案，开启跨境电商之旅</p>
-            </div>
-            <div class="products-grid" id="productsGrid">
-                <!-- 由 JS 动态生成 -->
-            </div>
+        <div class="products-grid hero-products" id="productsGrid">
+            <!-- 由 JS 动态生成 -->
         </div>
     </section>
 
@@ -183,4 +174,5 @@
         document.querySelectorAll('.section').forEach(el => observer.observe(el));
     </script>
 </body>
+
 </html>

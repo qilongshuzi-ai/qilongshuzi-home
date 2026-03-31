@@ -13,9 +13,15 @@
     --accent-gold: #F59E0B;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
@@ -28,8 +34,10 @@ body {
 /* ===== 背景动画光斑 ===== */
 .bg-animation {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
@@ -44,38 +52,59 @@ body {
 }
 
 .orb-1 {
-    width: 500px; height: 500px;
+    width: 500px;
+    height: 500px;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.3), transparent);
-    top: -10%; left: -5%;
+    top: -10%;
+    left: -5%;
     animation-delay: 0s;
 }
 
 .orb-2 {
-    width: 400px; height: 400px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, rgba(139, 92, 246, 0.25), transparent);
-    top: 40%; right: -10%;
+    top: 40%;
+    right: -10%;
     animation-delay: -5s;
 }
 
 .orb-3 {
-    width: 350px; height: 350px;
+    width: 350px;
+    height: 350px;
     background: radial-gradient(circle, rgba(245, 158, 11, 0.2), transparent);
-    bottom: -5%; left: 30%;
+    bottom: -5%;
+    left: 30%;
     animation-delay: -10s;
 }
 
 .orb-4 {
-    width: 300px; height: 300px;
+    width: 300px;
+    height: 300px;
     background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent);
-    top: 20%; left: 50%;
+    top: 20%;
+    left: 50%;
     animation-delay: -15s;
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(30px, -40px) scale(1.1); }
-    50% { transform: translate(-20px, 20px) scale(0.95); }
-    75% { transform: translate(40px, 10px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(40px, 10px) scale(1.05);
+    }
 }
 
 /* ===== 玻璃效果类 ===== */
@@ -112,7 +141,9 @@ body {
 /* ===== 导航栏 ===== */
 .glass-nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: rgba(10, 14, 26, 0.6);
     backdrop-filter: blur(20px);
@@ -137,7 +168,8 @@ body {
 }
 
 .nav-logo {
-    width: 36px; height: 36px;
+    width: 36px;
+    height: 36px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -169,14 +201,21 @@ body {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -4px; left: 0;
-    width: 0; height: 2px;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
     background: linear-gradient(90deg, var(--accent-blue), var(--accent-violet));
     transition: width 0.3s;
 }
 
-.nav-link:hover { color: var(--text-primary); }
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
 
 /* ===== Hero ===== */
 .hero {
@@ -184,14 +223,21 @@ body {
     z-index: 1;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 24px 80px;
+    padding: 100px 24px 60px;
+    gap: 48px;
 }
 
 .hero-content {
     max-width: 800px;
+}
+
+.hero-products {
+    max-width: 1000px;
+    width: 100%;
 }
 
 .hero-badge {
@@ -206,15 +252,25 @@ body {
 }
 
 .badge-dot {
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #10B981;
     animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-    50% { opacity: 0.8; box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
 }
 
 .hero-title {
@@ -236,7 +292,7 @@ body {
     font-size: 17px;
     line-height: 1.8;
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .glass-btn {
@@ -317,8 +373,10 @@ body {
 
 .product-glow {
     position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
     opacity: 0;
     transition: opacity 0.5s;
     filter: blur(100px);
@@ -329,7 +387,8 @@ body {
 }
 
 .product-logo-wrap {
-    width: 100px; height: 100px;
+    width: 100px;
+    height: 100px;
     border-radius: 24px;
     overflow: hidden;
     margin-bottom: 24px;
@@ -342,7 +401,8 @@ body {
 }
 
 .product-logo {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -453,7 +513,8 @@ body {
 }
 
 .footer-logo {
-    width: 28px; height: 28px;
+    width: 28px;
+    height: 28px;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -487,15 +548,38 @@ body {
 
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-title { font-size: 36px; }
-    .hero-subtitle { font-size: 15px; }
-    .hero-subtitle br { display: none; }
-    .products-grid { grid-template-columns: 1fr; gap: 24px; }
-    .features-grid { grid-template-columns: repeat(2, 1fr); }
-    .section { padding: 60px 16px; }
+    .nav-links {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .hero-subtitle br {
+        display: none;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 60px 16px;
+    }
 }
 
 @media (max-width: 480px) {
-    .features-grid { grid-template-columns: 1fr; }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
